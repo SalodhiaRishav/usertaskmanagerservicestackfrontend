@@ -26,8 +26,12 @@ const getters = {
 const actions = {
     postNewTask: (context, task) => {
         return new Promise((resolve,reject)=>{
-            const url = "http://localhost:56329/task/" 
-            axios.post(url, task)
+            const url = "http://localhost:56329/json/oneway/CreateTaskRequestDTO" 
+            let config = {
+                headers: { 'Content-Type': 'application/json' },
+              };
+            
+            axios.post(url, task,config)
             .then((response)=>{
                 context.commit('changeNewTaskAddedStatus',true)
                

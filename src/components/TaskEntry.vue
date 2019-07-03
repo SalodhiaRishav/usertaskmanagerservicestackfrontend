@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-6 mb-3">
           <label for="category">Task Domain</label>
-          <select v-model="task.taskdomain" id="category">
+          <select v-model="task.taskcategoryid" id="category">
             <option v-for="(category,index) in categories" :key=index  :value="category.ID">{{category.CategoryName}}</option>
           </select>
         </div>
@@ -64,7 +64,7 @@ export default {
       categories: null,
       task: {
         taskdate: "",
-        taskdomain: "",
+        taskcategoryid: null,
         expectedtime: null,
         timespent: null,
         userid: null,
@@ -82,7 +82,7 @@ export default {
   methods: {
     clearTask() {
       (this.task.taskdate = ""),
-        (this.task.taskdomain = ""),
+        (this.task.taskcategoryid = null),
         (this.task.expectedtime = null),
         (this.task.timespent = null),
         (this.task.userstory = "");
@@ -93,9 +93,13 @@ export default {
       if (userId === null) {
         return;
       } else {
-        this.task.userid = userId;
+        this.task.userid = userId;      
+        let posttask={
+          "Task":this.task
+        }
+        console.log(posttask)
         this.$store
-          .dispatch("postNewTask", this.task)
+          .dispatch("postNewTask", posttask)
           .then((data) => {
             if(data){
             this.clearTask();

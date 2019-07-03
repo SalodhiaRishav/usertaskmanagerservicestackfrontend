@@ -38,9 +38,9 @@
             >
               <a class="nav-link">{{currentLink.DisplayName}}</a>
             </router-link>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" style="display:inline" @click="logout">LogOut</a>
-            </li>
+            </li> -->
           </div>
         </ul>
       </div>
