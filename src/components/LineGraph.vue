@@ -15,6 +15,15 @@ export default {
         display: true,
         text: "Expected Time vs Spent Time"
       },
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            }
+          }
+        ]
+      },
       responsive: true,
       maintainAspectRatio: false
     }
