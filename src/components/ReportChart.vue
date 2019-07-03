@@ -7,6 +7,7 @@
       <div class="col">
         <app-Linegraph></app-Linegraph>
       </div>
+      hi this is chart
     </div>
   </div>
 </template>

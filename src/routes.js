@@ -20,5 +20,10 @@ export const routes = [
         path: '/task',
         component: TaskEntry
     },
+    {
+        path: '/',
+        redirect: '/login'
+    },
+    
    
 ]

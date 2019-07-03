@@ -29,8 +29,7 @@ const actions = {
             const url = "http://localhost:56329/json/oneway/CreateTaskRequestDTO" 
             let config = {
                 headers: { 'Content-Type': 'application/json' },
-              };
-            
+              };            
             axios.post(url, task,config)
             .then((response)=>{
                 context.commit('changeNewTaskAddedStatus',true)

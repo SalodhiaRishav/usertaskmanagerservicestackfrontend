@@ -97,7 +97,6 @@ export default {
         let posttask={
           "Task":this.task
         }
-        console.log(posttask)
         this.$store
           .dispatch("postNewTask", posttask)
           .then((data) => {
