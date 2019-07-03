@@ -16,7 +16,7 @@
           <th scope="row">{{index+1}}</th>
           <td>{{task.TaskCategory.CategoryName}}</td>
           <td>{{task.UserStory}}</td>
-          <td>{{task.TaskDate.substring(0, 10)}}</td>
+          <td>{{(new Date(task.TaskDate.match(/\d+/)[0] * 1)).toString().substring(0,16)}}</td>
           <td>{{task.TimeSpent}}</td>
           <td>{{task.ExpectedTime}}</td>
         </tr>
@@ -34,6 +34,9 @@ export default {
       tasks: null,
       listFetched: false
     };
+  },
+  method:{
+   
   },
   created() {
     let userId = sessionStorage.getItem("id");
