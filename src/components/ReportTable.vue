@@ -26,17 +26,12 @@
 </template>
 
 <script>
-
-
 export default {
   data() {
     return {
       tasks: null,
       listFetched: false
     };
-  },
-  method:{
-   
   },
   created() {
     let userId = sessionStorage.getItem("id");
