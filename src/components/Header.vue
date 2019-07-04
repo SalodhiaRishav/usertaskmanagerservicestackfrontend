@@ -1,9 +1,7 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <span class="navbar-brand">Task Manger</span>
-     
-       
+      <span class="navbar-brand">Task Manger</span>  
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <div v-if="!isLogined">
