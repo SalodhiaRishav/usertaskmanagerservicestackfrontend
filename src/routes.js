@@ -23,7 +23,5 @@ export const routes = [
     {
         path: '/',
         redirect: '/login'
-    },
-    
-   
+    }, 
 ]
