@@ -68,8 +68,7 @@ export default {
       });
     }
   },
-  mounted() {
-    
+  mounted() {   
     this.drawBarGraph();
   }
 };
